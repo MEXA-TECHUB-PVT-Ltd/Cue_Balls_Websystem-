@@ -176,11 +176,7 @@ function Sidebar({ componentData }) {
                             <DrawerHeader sx={{ backgroundColor: "transparent" }}>
                                 <Grid container spacing={0} pt={2}>
                                     <Grid xs={12} align="center" pt={3}>
-                                        <Avatar src={logo}
-                                            style={{
-                                                width: 110,
-                                                height: 110,
-                                            }} ></Avatar>
+                                        <img src={logo} alt="..." style={{}} />
                                     </Grid>
                                 </Grid>
 
@@ -224,8 +220,8 @@ function Sidebar({ componentData }) {
                             </li>
 
                             <li>
-                                <NavLink to={`${endpoint}users`} className="navbar-link">
-                                    {[<span ><Typography sx={{ fontFamily: "Laila" }}>Users</Typography></span>].map((text, index) => (
+                                <NavLink to={`${endpoint}playgame`} className="navbar-link">
+                                    {[<span ><Typography sx={{ fontFamily: "Laila" }}>Play Game</Typography></span>].map((text, index) => (
                                         <ListItem key={text} disablePadding sx={{ display: 'block' }} >
                                             <ListItemButton
                                                 sx={{
@@ -251,8 +247,8 @@ function Sidebar({ componentData }) {
                             </li>
 
                             <li>
-                                <NavLink to={`${endpoint}subscribedusers`} className="navbar-link">
-                                    {[<span ><Typography sx={{ fontFamily: "Laila" }}>Subscribed Users</Typography></span>].map((text, index) => (
+                                <NavLink to={`${endpoint}winner`} className="navbar-link">
+                                    {[<span ><Typography sx={{ fontFamily: "Laila" }}>Winner</Typography></span>].map((text, index) => (
                                         <ListItem key={text} disablePadding sx={{ display: 'block' }} >
                                             <ListItemButton
                                                 sx={{
