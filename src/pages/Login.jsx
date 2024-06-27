@@ -27,10 +27,16 @@ function Login() {
         email: yup
             .string()
             .email("Invalid email")
+            .matches(/^[\w.%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/, "Invalid email")
             .required('Required Email'),
         password: yup
             .string('Enter your password')
-            .required('Password is required'),
+            .required('Password is required')
+            .min(8, 'Password must be at least 8 characters')
+            .matches(/[A-Z]/, 'Password must contain at least one uppercase letter')
+            .matches(/[a-z]/, 'Password must contain at least one lowercase letter')
+            .matches(/[0-9]/, 'Password must contain at least one digit')
+            .matches(/[!@#$%^&*(),.?":{}|<>]/, 'Password must contain at least one special character'),
     });
     const formik = useFormik({
         initialValues: {
