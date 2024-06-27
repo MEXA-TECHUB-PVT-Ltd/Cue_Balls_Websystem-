@@ -120,8 +120,8 @@ function OtpVerification() {
                                                         otpType=""
                                                         disabled={false}
                                                         inputStyles={{
-                                                            width: "15%",
-                                                            height: "7vh",
+                                                            width: "17%",
+                                                            height: "10vh",
                                                             border: "3px solid #A4A4A4",
                                                             backgroundColor: "#353535",
                                                             color: "#A4A4A4",

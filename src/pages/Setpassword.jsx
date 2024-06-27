@@ -32,9 +32,14 @@ function SetPassword() {
         }
     }, [])
     const validationSchema = yup.object({
-        newpassword: yup.string()
-            .required('New password is required')
-            .min(6, 'Password must be at least 6 characters long'),
+        newpassword: yup 
+            .string('Enter your password')
+            .required('Password is required')
+            .min(8, 'Password must be at least 8 characters long')
+            .matches(/[A-Z]/, 'Password must contain at least one uppercase letter')
+            .matches(/[a-z]/, 'Password must contain at least one lowercase letter')
+            .matches(/[0-9]/, 'Password must contain at least one digit')
+            .matches(/[!@#$%^&*(),.?":{}|<>]/, 'Password must contain at least one special character'),
         confirmpassword: yup.string()
             .oneOf([yup.ref('newpassword'), null], 'Passwords must match')
             .required('Confirm password is required'),
