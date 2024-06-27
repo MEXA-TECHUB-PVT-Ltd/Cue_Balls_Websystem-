@@ -7,8 +7,8 @@ import Emailverification from "././pages/Emailverification";
 import OtpVerification from "././pages/Otpverification";
 import SetPassword from "././pages/Setpassword";
 import Dashboard from "././pages/Dasboard";
-import Users from "././pages/Users";
-import Subscribedusers from "././pages/Subscribedusers";
+import Playgame from "././pages/Playgame";
+import Winner from "././pages/Winner";
 import Opktest from "././pages/Opktest";
 import PrivacyPolicy from "././pages/PrivacyPolicy";
 import TermsConditions from "././pages/TermsConditions";
@@ -29,8 +29,8 @@ function App() {
           <Route exact path={`${endpoint}otpverification`} element={<OtpVerification />} />
           <Route exact path={`${endpoint}setpassword`} element={<SetPassword />} />
           <Route exact path={`${endpoint}dashboard`} element={<Dashboard />} />
-          <Route exact path={`${endpoint}users`} element={<Users />} />
-          <Route exact path={`${endpoint}subscribedusers`} element={<Subscribedusers />} />
+          <Route exact path={`${endpoint}playgame`} element={<Playgame />} />
+          <Route exact path={`${endpoint}winner`} element={<Winner />} />
           <Route exact path={`${endpoint}opktest`} element={<Opktest />} />
           <Route exact path={`${endpoint}privacypolicy`} element={<PrivacyPolicy />} />
           <Route exact path={`${endpoint}termsconditions`} element={<TermsConditions />} />
