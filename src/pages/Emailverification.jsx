@@ -63,6 +63,7 @@ function Emailverification() {
                             });
                         } else {
                             navigate(`${endpoint}otpverification`);
+                            localStorage.setItem("useremail", values.email);
                             setLoading(false);
                             formik.resetForm();
                         }
