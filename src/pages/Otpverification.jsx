@@ -24,7 +24,7 @@ function OtpVerification() {
     const [profiledetails, setProfiledetails] = useState('');
 
     useEffect(() => {
-        const details = JSON.parse(localStorage.getItem('profiledetails'));
+        const details = localStorage.getItem('useremail');
         if (details) {
             console.log(details);
             setProfiledetails(details);
@@ -46,7 +46,7 @@ function OtpVerification() {
                 'Content-Type': 'application/json',
             };
             var Data = {
-                "email": profiledetails?.data?.email,
+                "email": profiledetails,
                 "otp": enteredotp
             };
             fetch(InsertAPIURL, {

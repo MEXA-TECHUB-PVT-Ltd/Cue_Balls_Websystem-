@@ -11,7 +11,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import { Assessment, Category, Code, Dashboard, DeviceThermostat, Diversity3, Feedback, FormatAlignLeft, Groups, Home, Interests, LocalLibrary, Lock, Logout, MergeType, Notifications, People, PeopleAlt, PriorityHigh, PrivacyTip, RecordVoiceOver, Report, Restaurant, RestaurantMenu, School, Search, Settings, Subscriptions, TwoWheeler } from '@mui/icons-material';
+import { Assessment, Category, Code, Dashboard, DeviceThermostat, Diversity3, Feedback, FormatAlignLeft, Groups, History, Home, Interests, LocalLibrary, Lock, Logout, MergeType, Notifications, People, PeopleAlt, PriorityHigh, PrivacyTip, RecordVoiceOver, Report, Restaurant, RestaurantMenu, School, Search, Settings, Subscriptions, TwoWheeler } from '@mui/icons-material';
 import { NavLink, useNavigate } from 'react-router-dom';
 import "../../App.css"
 import { Avatar, Button, Grid, InputAdornment, Menu, MenuItem, OutlinedInput, TextField, Typography } from '@mui/material';
@@ -165,7 +165,7 @@ function Sidebar({ componentData }) {
 
     return (
         <>
-            <Box sx={{ backgroundColor: "rgba(255, 230, 127,0.6)", height: "auto", display: 'flex' }}>
+            <Box sx={{ backgroundColor: "rgba(255, 230, 127,0.6)", height: "auto", display: 'flex',overflow: "hidden" }}>
                 <CssBaseline />
 
                 <Drawer variant="permanent" open={open}  >
@@ -299,6 +299,33 @@ function Sidebar({ componentData }) {
                                     ))}
                                 </NavLink>
                             </li>
+{/* 
+                            <li>
+                                <NavLink to={`${endpoint}history`} className="navbar-link">
+                                    {[<span ><Typography sx={{ fontFamily: "Rubik" }}>History</Typography></span>].map((text, index) => (
+                                        <ListItem key={text} disablePadding sx={{ display: 'block' }} >
+                                            <ListItemButton
+                                                sx={{
+                                                    minHeight: 0,
+                                                    justifyContent: open ? 'initial' : 'center',
+                                                    px: 2, pb: 0,
+                                                }}
+                                            >
+                                                <ListItemIcon
+                                                    sx={{
+                                                        minWidth: 0,
+                                                        mr: open ? 3 : 'auto',
+                                                        justifyContent: 'center',
+                                                    }}
+                                                >
+                                                    {index % 2 === 0 ? <History sx={{ fontSize: "20px" }} /> : <></>}
+                                                </ListItemIcon>
+                                                <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
+                                            </ListItemButton>
+                                        </ListItem>
+                                    ))}
+                                </NavLink>
+                            </li> */}
 
                             <li>
                                 <NavLink to={`${endpoint}privacypolicy`} className="navbar-link">
@@ -359,7 +386,7 @@ function Sidebar({ componentData }) {
 
                 </Drawer>
 
-                <Box component="main" sx={{ width: { xs: "50%", md: "100%" }, flexGrow: 1 }}>
+                <Box sx={{ width: { xs: "50%", md: "100%" }, flexGrow: 1 }}>
                     {/* <Dashboard /> */}
                     {componentData}
                 </Box>

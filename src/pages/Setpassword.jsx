@@ -25,14 +25,14 @@ function SetPassword() {
     const [profiledetails, setProfiledetails] = useState('');
 
     useEffect(() => {
-        const details = JSON.parse(localStorage.getItem('profiledetails'));
+        const details = localStorage.getItem('useremail');
         if (details) {
             console.log(details);
             setProfiledetails(details);
         }
     }, [])
     const validationSchema = yup.object({
-        newpassword: yup 
+        newpassword: yup
             .string('Enter your password')
             .required('Password is required')
             .min(8, 'Password must be at least 8 characters long')
@@ -62,7 +62,7 @@ function SetPassword() {
                     'Content-Type': 'application/json',
                 };
                 var Data = {
-                    "email": profiledetails?.data?.email,
+                    "email": profiledetails,
                     "password": values.newpassword
                 };
                 fetch(InsertAPIURL, {

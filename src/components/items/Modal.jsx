@@ -25,14 +25,14 @@ function ModalAdd({ data, open, onClose, title }) {
         >
             <Box width={{ xs: 400, md: 500, lg: 500, xl: 500 }} height="auto" sx={style}>
 
-                <Box sx={{ backgroundColor: "#C4B1AB", borderTopLeftRadius: 10, borderTopRightRadius: 10 }}>
+                <Box sx={{ backgroundColor: "rgba(255, 230, 127 )", borderTopLeftRadius: 10, borderTopRightRadius: 10 }}>
                     <Grid container spacing={0} p={2}>
                         <Grid xs={6} align="left">
-                            <TypographyMD variant='paragraph' label={title} color="white" marginLeft={0} fontSize="17px" fontFamily="Laila" fontWeight={550} align="left" />
+                            <TypographyMD variant='paragraph' label={title} color="#F5BC01" marginLeft={0} fontSize="17px" fontFamily="Rubik" fontWeight={550} align="left" />
                         </Grid>
 
                         <Grid xs={6} align="right">
-                            <Close onClick={onClose} sx={{ color: "white" }} />
+                            <Close onClick={onClose} sx={{ color: "#F5BC01" }} />
                         </Grid>
                     </Grid>
                 </Box>

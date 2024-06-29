@@ -2,19 +2,21 @@ import { Box, Grid, Modal, Stack } from "@mui/material";
 import React from "react"
 import TypographyMD from "./Typography";
 import { CheckCircle, Close } from "@mui/icons-material";
+import success from "../../Assets/success.png";
+import ButtonMD from "./ButtonMD";
 
 function ModalSuccess({ data, open, onClose, title, subheading }) {
 
     const styleaddsuccess = {
-        bgcolor: 'white',
-        outline: "none",
-        boxShadow: 0,
-        p: 1,
         position: 'absolute',
-        top: '8%',
+        top: '50%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
-        borderRadius: 2
+        bgcolor: '#FFFFFF',
+        outline: "none",
+        boxShadow: 0,
+        // p: 4,
+        borderRadius: 3
     };
 
     return (
@@ -26,22 +28,22 @@ function ModalSuccess({ data, open, onClose, title, subheading }) {
                 aria-describedby="modal-modal-description"
             >
                 <Box width={{ xs: 400, md: 450, lg: 450, xl: 450 }} height="auto" sx={styleaddsuccess}>
-                    <Grid container spacing={0}>
-                        <Grid xs={1} align="left">
-                            <CheckCircle sx={{ mt: 1.5, width: "25px", height: "25px", color: "#C4B1AB" }} />
-                        </Grid>
+                    <Grid container spacing={0} p={5}>
+                        <Grid xs={12} align="center">
 
-                        <Grid xs={10} align="left">
-                            <Stack direction="column">
-                                <TypographyMD variant='paragraph' label={title} color="#C4B1AB" fontFamily="Laila" marginLeft={0} fontSize="20px" fontWeight={550} align="left" />
-                                <TypographyMD variant='paragraph' label={subheading} color="#424242" fontFamily="Laila" marginLeft={0} marginTop={-1.5} fontSize="15px" fontWeight={500} align="left" />
-                            </Stack>
-                        </Grid>
+                            <div style={{ display: "flex", justifyContent: "center", alignContent: "center" }}>
+                                <Stack align="center" direction="column" spacing={2} >
+                                    <img src={success} alt="..." style={{ alignSelf: "center", width: "30vh" }} />
 
-                        <Grid xs={1} align="right">
-                            <Close onClick={onClose} />
-                        </Grid>
+                                    <TypographyMD variant='paragraph' label={title} color="#232323" fontFamily="Rubik" marginLeft={0} fontSize="20px" fontWeight={550} align="center" />
 
+                                    <div style={{ display: "flex", justifyContent: "center", alignContent: "center" }}>
+                                        {data}
+                                    </div>
+                                </Stack>
+                            </div>
+
+                        </Grid>
                     </Grid>
 
                 </Box>
