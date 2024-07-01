@@ -78,7 +78,7 @@ function Login() {
                         } else {
                             localStorage.setItem('profiledetails', JSON.stringify(response));
                             localStorage.setItem("userpassword", values.password);
-                            navigate(`${endpoint}dashboard`)
+                            navigate(`${endpoint}playgame`)
                             setLoading(false);
                             formik.resetForm();
                         }
