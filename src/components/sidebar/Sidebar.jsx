@@ -11,7 +11,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import { Assessment, Category, Code, Dashboard, DeviceThermostat, Diversity3, Feedback, FormatAlignLeft, Groups, History, Home, Interests, LocalLibrary, Lock, Logout, MergeType, Notifications, People, PeopleAlt, PriorityHigh, PrivacyTip, RecordVoiceOver, Report, Restaurant, RestaurantMenu, School, Search, Settings, Subscriptions, TwoWheeler } from '@mui/icons-material';
+import { Assessment, Category, Code, Dashboard, DeviceThermostat, Diversity3, Feedback, FormatAlignLeft, Games, Groups, History, Home, Interests, LocalLibrary, Lock, Logout, MergeType, Notifications, People, PeopleAlt, PriorityHigh, PrivacyTip, RecordVoiceOver, Report, Restaurant, RestaurantMenu, School, Search, Settings, Subscriptions, TwoWheeler } from '@mui/icons-material';
 import { NavLink, useNavigate } from 'react-router-dom';
 import "../../App.css"
 import { Avatar, Button, Grid, InputAdornment, Menu, MenuItem, OutlinedInput, TextField, Typography } from '@mui/material';
@@ -165,7 +165,7 @@ function Sidebar({ componentData }) {
 
     return (
         <>
-            <Box sx={{ backgroundColor: "rgba(255, 230, 127,0.6)", height: "auto", display: 'flex',overflow: "hidden" }}>
+            <Box sx={{ backgroundColor: "rgba(255, 230, 127,0.6)", height: "auto", display: 'flex' }}>
                 <CssBaseline />
 
                 <Drawer variant="permanent" open={open}  >
@@ -237,7 +237,7 @@ function Sidebar({ componentData }) {
                                                         justifyContent: 'center',
                                                     }}
                                                 >
-                                                    {index % 2 === 0 ? <Groups sx={{ fontSize: "20px" }} /> : <></>}
+                                                    {index % 2 === 0 ? <Games sx={{ fontSize: "20px" }} /> : <></>}
                                                 </ListItemIcon>
                                                 <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
                                             </ListItemButton>
@@ -299,7 +299,7 @@ function Sidebar({ componentData }) {
                                     ))}
                                 </NavLink>
                             </li>
-{/* 
+
                             <li>
                                 <NavLink to={`${endpoint}history`} className="navbar-link">
                                     {[<span ><Typography sx={{ fontFamily: "Rubik" }}>History</Typography></span>].map((text, index) => (
@@ -325,7 +325,7 @@ function Sidebar({ componentData }) {
                                         </ListItem>
                                     ))}
                                 </NavLink>
-                            </li> */}
+                            </li>
 
                             <li>
                                 <NavLink to={`${endpoint}privacypolicy`} className="navbar-link">

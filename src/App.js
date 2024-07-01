@@ -13,6 +13,7 @@ import Wallet from "././pages/Wallet";
 import Paypalsuccess from "././pages/Paypalsuccess";
 import PrivacyPolicy from "././pages/PrivacyPolicy";
 import TermsConditions from "././pages/TermsConditions";
+import Entryconfirm from "././pages/Entryconfirm";
 import UpdatePassword from "././pages/Updatepassword";
 import Termsandconditions from "././pages/Termsandconditions";
 import History from "././pages/History";
@@ -40,6 +41,7 @@ function App() {
           <Route exact path={`${endpoint}updatepassword`} element={<UpdatePassword />} />
           <Route exact path={`${endpoint}termsandconditions`} element={<Termsandconditions />} />
           <Route exact path={`${endpoint}history`} element={<History />} />
+          <Route exact path={`${endpoint}entryconfirm`} element={<Entryconfirm />} />
         </Routes>
       </Router >
     </>
